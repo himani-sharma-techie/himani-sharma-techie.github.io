@@ -21,13 +21,23 @@ body {
 .navbar {
     background: #007BFF; /* Primary color for navbar */
     color: #fff;
-    padding: 15px 0; /* Vertical padding */
+    position: relative; /* Position for absolute children */
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between; /* Space between logo and nav links */
     align-items: center; /* Center vertically */
+}
+
+.menu-toggle {
+    display: none; /* Hide checkbox */
+}
+
+.menu-icon {
+    display: none; /* Hide menu icon by default */
+    font-size: 28px; /* Icon size */
+    cursor: pointer; /* Pointer on hover */
 }
 
 .nav-links {
@@ -49,10 +59,36 @@ body {
     color: #f4f4f4; /* Lighten on hover */
 }
 
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning for dropdown */
+        top: 60px; /* Align under navbar */
+        right: 0; /* Align to right */
+        background: #007BFF; /* Navbar background */
+        width: 100%; /* Full width */
+    }
+
+    .menu-toggle:checked + .nav-links {
+        display: flex; /* Show links when menu is toggled */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Vertical spacing for dropdown */
+        text-align: center; /* Center text */
+    }
+}
+
 .hero {
     background: url('https://source.unsplash.com/1600x900/?web-development') no-repeat center center/cover; /* Background image */
     color: #fff; /* White text for visibility */
-    padding: 100px 20px; /* Padding for hero section */
+    padding: 80px 20px; /* Padding for hero section */
     text-align: center; /* Centered text */
 }
 
@@ -69,7 +105,7 @@ body {
     background: #e6b800; /* Darker on hover */
 }
 
-.about, .skills, .footer {
+.about, .skills, .projects, .footer {
     margin: 40px 0; /* Space between sections */
     background: #fff; /* White background for content */
     padding: 20px; /* Padding for content */
@@ -87,6 +123,10 @@ ul {
     padding-left: 20px; /* Space for list items */
 }
 
+.projects ul {
+    margin-top: 10px; /* Margin for project list */
+}
+
 .footer {
     text-align: center; /* Centered text */
     padding: 20px 0; /* Padding for footer */
@@ -99,4 +139,19 @@ ul {
 
 .footer a:hover {
     text-decoration: underline; /* Underline on hover for accessibility */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .hero {
+        padding: 60px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .cta-button {
+        padding: 12px 24px; /* Increased padding for easier tapping */
+    }
+
+    .container {
+        padding: 10px; /* Less padding for smaller screens */
+    }
 }
