@@ -1,0 +1,102 @@
+/* Resetting default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+.container {
+    max-width: 1200px; /* Limiting width for readability */
+    margin: 0 auto; /* Centering the container */
+    padding: 20px; /* Padding around content */
+}
+
+.navbar {
+    background: #007BFF; /* Primary color for navbar */
+    color: #fff;
+    padding: 15px 0; /* Vertical padding */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Center vertically */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal alignment */
+}
+
+.nav-links li {
+    margin-left: 20px; /* Space between nav items */
+}
+
+.nav-links a {
+    color: #fff; /* White text for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+    color: #f4f4f4; /* Lighten on hover */
+}
+
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?web-development') no-repeat center center/cover; /* Background image */
+    color: #fff; /* White text for visibility */
+    padding: 100px 20px; /* Padding for hero section */
+    text-align: center; /* Centered text */
+}
+
+.cta-button {
+    background: #ffcc00; /* Call-to-action button color */
+    color: #333; /* Dark text */
+    padding: 10px 20px; /* Padding for button */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s; /* Smooth background transition */
+}
+
+.cta-button:hover {
+    background: #e6b800; /* Darker on hover */
+}
+
+.about, .skills, .footer {
+    margin: 40px 0; /* Space between sections */
+    background: #fff; /* White background for content */
+    padding: 20px; /* Padding for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    margin-bottom: 15px; /* Space below headings */
+    color: #007BFF; /* Primary color for headings */
+}
+
+ul {
+    list-style-type: disc; /* Bullet points for lists */
+    padding-left: 20px; /* Space for list items */
+}
+
+.footer {
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Padding for footer */
+}
+
+.footer a {
+    color: #007BFF; /* Primary color for links */
+    text-decoration: none; /* No underline */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline on hover for accessibility */
+}
